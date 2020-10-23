@@ -1,0 +1,20 @@
+nacos:
+  config:
+    server-addr:
+    username:
+    password:
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: ${NACOS_SERVER_ADDR}
+      username: ${NACOS_USERNAME}
+      password: ${NACOS_PASSWORD}
+      config:
+        context-path:
+        file-extension: yaml
+    gateway:
+      discovery:
+        locator:
+          enabled: true
