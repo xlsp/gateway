@@ -1,8 +1,5 @@
-nacos:
-  config:
-    server-addr:
-    username:
-    password:
+server:
+  port: ${GATEWAY_PORT}
 spring:
   application:
     name: gateway
@@ -12,7 +9,6 @@ spring:
       username: ${NACOS_USERNAME}
       password: ${NACOS_PASSWORD}
       config:
-        context-path:
         file-extension: yaml
     gateway:
       discovery:
